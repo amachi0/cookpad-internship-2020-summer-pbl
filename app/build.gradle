@@ -1,0 +1,55 @@
+import dependencies.Dep
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.1"
+
+    defaultConfig {
+        applicationId "jp.amachi0.cookpad_internship_2020_summer_pbl"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation(Dep.Kotlin.stdlibJvm)
+    implementation(Dep.AndroidX.appCompat)
+    implementation(Dep.AndroidX.coreKtx)
+    implementation(Dep.AndroidX.constraint)
+    implementation(Dep.AndroidX.activityKtx)
+    implementation(Dep.AndroidX.design)
+
+    implementation(Dep.Dagger.core)
+    implementation(Dep.Dagger.androidSupport)
+    implementation(Dep.Dagger.android)
+    kapt(Dep.Dagger.compiler)
+    kapt(Dep.Dagger.androidProcessor)
+    compileOnly(Dep.Dagger.assistedInjectAnnotations)
+    kapt(Dep.Dagger.assistedInjectProcessor)
+    implementation(Dep.Groupie.groupie)
+
+    testImplementation(Dep.Test.junit)
+}

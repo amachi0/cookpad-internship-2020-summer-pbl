@@ -1,0 +1,25 @@
+import dependencies.Dep
+
+buildscript {
+    ext.kotlin_version = "1.4.0"
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath Dep.GradlePlugin.android
+        classpath Dep.GradlePlugin.kotlin
+        classpath Dep.GradlePlugin.safeArgs
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
