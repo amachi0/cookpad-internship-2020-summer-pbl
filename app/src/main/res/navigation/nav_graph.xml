@@ -41,4 +41,10 @@
             android:id="@+id/action_recipes_to_recipe_detail"
             app:destination="@+id/recipe_detail"></action>
     </fragment>
+
+    <fragment
+        android:id="@+id/recipe_detail"
+        android:name="jp.amachi0.cookpad_internship_2020_summer_pbl.recipe_detail.RecipeDetailFragment"
+        android:label="fragment_recipe_detail"
+        tools:layout="@layout/fragment_recipe_detail"></fragment>
 </navigation>
