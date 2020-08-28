@@ -17,10 +17,17 @@
     </fragment>
 
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="jp.amachi0.cookpad_internship_2020_summer_pbl.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/feeling"
+        android:name="jp.amachi0.cookpad_internship_2020_summer_pbl.feeling.FeelingFragment"
+        android:label="fragment_feeling"
+        tools:layout="@layout/fragment_feeling">
+        <argument
+            android:name="nutrients"
+            app:argType="jp.amachi0.cookpad_internship_2020_summer_pbl.model.Nutrients" />
+        <action
+            android:id="@+id/action_feeling_to_recipes"
+            app:destination="@+id/recipes"></action>
+    </fragment>
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"

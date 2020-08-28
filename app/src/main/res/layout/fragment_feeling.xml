@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".feeling.FeelingFragment">
+
+
+        <!--        <androidx.cardview.widget.CardView-->
+        <!--            android:id="@+id/card_light"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center_horizontal"-->
+        <!--            app:cardCornerRadius="50dp"-->
+        <!--            tools:layout_editor_absoluteX="35dp"-->
+        <!--            tools:layout_editor_absoluteY="16dp">-->
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/imageView"-->
+        <!--                android:layout_width="340dp"-->
+        <!--                android:layout_height="200dp"-->
+        <!--                android:scaleType="centerCrop"-->
+        <!--                android:src="@drawable/assari" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/textView"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:text="@string/light"-->
+        <!--                android:textColor="#FFFFFF"-->
+        <!--                android:textSize="30sp"-->
+        <!--                android:textStyle="bold" />-->
+        <!--        </androidx.cardview.widget.CardView>-->
+
+        <!--        <androidx.cardview.widget.CardView-->
+        <!--            android:id="@+id/card_heavy"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center_horizontal"-->
+        <!--            app:cardCornerRadius="50dp"-->
+        <!--            tools:layout_editor_absoluteX="35dp"-->
+        <!--            tools:layout_editor_absoluteY="240dp">-->
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/imageView3"-->
+        <!--                android:layout_width="340dp"-->
+        <!--                android:layout_height="200dp"-->
+        <!--                android:scaleType="centerCrop"-->
+        <!--                android:src="@drawable/kotteri" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/textView2"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:text="@string/heavy"-->
+        <!--                android:textColor="#FFFFFF"-->
+        <!--                android:textSize="30sp"-->
+        <!--                android:textStyle="bold" />-->
+        <!--        </androidx.cardview.widget.CardView>-->
+
+        <!--        <androidx.cardview.widget.CardView-->
+        <!--            android:id="@+id/card_hot"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center_horizontal"-->
+        <!--            app:cardCornerRadius="50dp"-->
+        <!--            tools:layout_editor_absoluteX="35dp"-->
+        <!--            tools:layout_editor_absoluteY="464dp">-->
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/imageView4"-->
+        <!--                android:layout_width="340dp"-->
+        <!--                android:layout_height="200dp"-->
+        <!--                android:scaleType="centerCrop"-->
+        <!--                android:src="@drawable/hot" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/textView3"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:text="@string/hot"-->
+        <!--                android:textColor="#FFFFFF"-->
+        <!--                android:textSize="30sp"-->
+        <!--                android:textStyle="bold" />-->
+        <!--        </androidx.cardview.widget.CardView>-->
+
+        <!--        <androidx.cardview.widget.CardView-->
+        <!--            android:id="@+id/card_cold"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center_horizontal"-->
+        <!--            app:cardCornerRadius="50dp"-->
+        <!--            tools:layout_editor_absoluteX="35dp"-->
+        <!--            tools:layout_editor_absoluteY="688dp">-->
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/imageView5"-->
+        <!--                android:layout_width="340dp"-->
+        <!--                android:layout_height="200dp"-->
+        <!--                android:scaleType="centerCrop"-->
+        <!--                android:src="@drawable/cold" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/textView4"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:text="@string/cold"-->
+        <!--                android:textColor="#FFFFFF"-->
+        <!--                android:textSize="30sp"-->
+        <!--                android:textStyle="bold" />-->
+        <!--        </androidx.cardview.widget.CardView>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
