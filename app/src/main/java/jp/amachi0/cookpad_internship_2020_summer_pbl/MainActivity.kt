@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
+        AndroidInjection.inject(this)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             onDestinationChange(destination)
@@ -38,13 +39,14 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
         }
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
+    @Inject
+    lateinit var androidInjector: DispatchingAndroidInjector<Any>
+    override fun androidInjector(): AndroidInjector<Any> = androidInjector
+}
+
+@Module
+abstract class ActivityModule {
+    @ContributesAndroidInjector
+    abstract fun contributeMainActivity(): MainActivity
+
 }
