@@ -29,8 +29,16 @@
             app:destination="@+id/recipes"></action>
     </fragment>
 
+    <fragment
+        android:id="@+id/recipes"
+        android:name="jp.amachi0.cookpad_internship_2020_summer_pbl.recipes.RecipesFragment"
+        android:label="fragment_recipes"
+        tools:layout="@layout/fragment_recipes">
+        <argument
+            android:name="nutrients_and_feeling"
+            app:argType="jp.amachi0.cookpad_internship_2020_summer_pbl.model.NutrientsAndFeeling" />
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_recipes_to_recipe_detail"
+            app:destination="@+id/recipe_detail"></action>
     </fragment>
 </navigation>
