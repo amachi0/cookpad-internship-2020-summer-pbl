@@ -4,6 +4,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlinx-serialization'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
 
 android {
     compileSdkVersion 30
@@ -32,15 +34,24 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    dataBinding {
+        enabled true
+    }
 }
 
 dependencies {
     implementation(Dep.Kotlin.stdlibJvm)
+    implementation(Dep.Kotlin.serializationAndroid)
+
     implementation(Dep.AndroidX.appCompat)
     implementation(Dep.AndroidX.coreKtx)
     implementation(Dep.AndroidX.constraint)
     implementation(Dep.AndroidX.activityKtx)
     implementation(Dep.AndroidX.design)
+
+    implementation(Dep.AndroidX.Navigation.runtimeKtx)
+    implementation(Dep.AndroidX.Navigation.fragmentKtx)
+    implementation(Dep.AndroidX.Navigation.uiKtx)
 
     implementation(Dep.Dagger.core)
     implementation(Dep.Dagger.androidSupport)
@@ -49,7 +60,13 @@ dependencies {
     kapt(Dep.Dagger.androidProcessor)
     compileOnly(Dep.Dagger.assistedInjectAnnotations)
     kapt(Dep.Dagger.assistedInjectProcessor)
+
     implementation(Dep.Groupie.groupie)
+    implementation(Dep.Groupie.databinding)
+
+    implementation(Dep.CardStackView.common)
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
 
     testImplementation(Dep.Test.junit)
 }

@@ -19,3 +19,13 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keepattributes *Annotation*, InnerClasses
+-dontnote kotlinx.serialization.SerializationKt
+-keep,includedescriptorclasses class jp.amachi0.cookpad_internship_2020_summer_pbl.**$$serializer { *; } # <-- change package name to your app's
+-keepclassmembers class jp.amachi0.cookpad_internship_2020_summer_pbl.** { # <-- change package name to your app's
+    *** Companion;
+}
+-keepclasseswithmembers class jp.amachi0.cookpad_internship_2020_summer_pbl.** { # <-- change package name to your app's
+    kotlinx.serialization.KSerializer serializer(...);
+}

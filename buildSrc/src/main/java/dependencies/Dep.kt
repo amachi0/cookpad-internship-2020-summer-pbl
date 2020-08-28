@@ -7,19 +7,14 @@ object Dep {
         val kotlinSerialization = "org.jetbrains.kotlin:kotlin-serialization:${Kotlin.version}"
         val safeArgs =
             "androidx.navigation:navigation-safe-args-gradle-plugin:${AndroidX.Navigation.version}"
-        val crashlytics = "com.google.firebase:firebase-crashlytics-gradle:2.0.0-beta01"
     }
 
     object AndroidX {
         val appCompat = "androidx.appcompat:appcompat:1.1.0"
-        val recyclerView = "androidx.recyclerview:recyclerview:1.1.0"
         val constraint = "androidx.constraintlayout:constraintlayout:2.0.0-beta4"
         val design = "com.google.android.material:material:1.1.0-rc01"
         val coreKtx = "androidx.core:core-ktx:1.2.0-rc01"
-        val preference = "androidx.preference:preference:1.1.0"
         val activityKtx = "androidx.activity:activity-ktx:1.1.0"
-        val fragmentKtx = "androidx.fragment:fragment-ktx:1.2.1"
-        val swiperefreshlayout = "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
         val lifecycleLiveData = "androidx.lifecycle:lifecycle-livedata:2.2.0"
         val liveDataCoreKtx = "androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0"
@@ -37,7 +32,7 @@ object Dep {
     object Kotlin {
         val version = "1.4.0"
         val stdlibCommon = "org.jetbrains.kotlin:kotlin-stdlib-common:$version"
-        val stdlibJvm = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$version"
+        val stdlibJvm = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$version"
         val coroutinesVersion = "1.3.3"
         val coroutinesCommon =
             "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:$coroutinesVersion"
@@ -46,17 +41,7 @@ object Dep {
             "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
         val coroutinesPlayServices =
             "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$coroutinesVersion"
-        val serializationVersion = "0.14.0"
-        val serializationCommon =
-            "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$serializationVersion"
-        val serializationAndroid =
-            "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serializationVersion"
-    }
-
-    object Firebase {
-        val core = "com.google.firebase:firebase-core:16.0.4"
-        val firestoreKtx = "com.google.firebase:firebase-firestore-ktx:21.2.1"
-        val storageKtx = "com.google.firebase:firebase-storage-ktx:19.1.1"
+        val serializationAndroid = "org.jetbrains.kotlinx:kotlinx-serialization-core:1.0.0-RC"
     }
 
     object Dagger {
@@ -89,5 +74,10 @@ object Dep {
         val version = "2.7.2"
         val groupie = "com.xwray:groupie:$version"
         val databinding = "com.xwray:groupie-databinding:$version"
+    }
+
+    object CardStackView {
+        val version = "2.3.4"
+        val common = "com.yuyakaido.android:card-stack-view:${version}"
     }
 }
