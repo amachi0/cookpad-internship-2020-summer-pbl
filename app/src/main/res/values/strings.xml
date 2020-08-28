@@ -1,12 +1,26 @@
 <resources>
     <string name="app_name">cookpad_internship_2020_summer_pbl</string>
-    <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!--  app  -->
+    <string name="title_nutrients">栄養素を選択</string>
+    <string name="title_feeling">今日の気分は？</string>
+    <string name="title_recipes">レシピ</string>
+    <string name="title_recipe_detail">献立</string>
+
+    <!--  nutrient  -->
+    <string name="calorie">カロリー</string>
+    <string name="calorie_unit">kcal</string>
+    <string name="protein">タンパク質</string>
+    <string name="gram_unit">g</string>
+    <string name="lipid">脂質</string>
+    <string name="next">次へ</string>
+
+    <!--  feeling  -->
+    <string name="healthy">あっさり</string>
+    <string name="greasy">こってり</string>
+    <string name="hot">温かい</string>
+    <string name="cold">冷たい</string>
+
+    <!--  recipes  -->
+    <string name="decision">これにする！</string>
 </resources>
